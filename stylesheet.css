@@ -1,0 +1,18 @@
+
+    .jumbotron {
+        background-color: lightgoldenrodyellow;
+    }
+    .past {
+      background-color: pink;
+      color: white;
+    }
+
+    .current {
+      background-color: white;
+      color: white;
+    }
+
+    .future {
+      background-color: lightskyblue;
+      color: white;
+    }
