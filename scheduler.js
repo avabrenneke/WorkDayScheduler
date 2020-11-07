@@ -23,3 +23,11 @@ $("button:submit").on("click", function () {
         localStorage.setItem(id, input);
     }
 });
+
+//Retrieve Input From Local Storage Upon Refreshing
+var userInput = $("input:text")
+for (var x = 0; x < userInput.length; x++) {
+    var id = $(userInput[x]).closest("tr").attr('id');
+    var input = localStorage.getItem(id)
+    $(userInput[x]).val(input);
+}
