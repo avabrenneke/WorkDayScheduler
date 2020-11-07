@@ -31,3 +31,28 @@ for (var x = 0; x < userInput.length; x++) {
     var input = localStorage.getItem(id)
     $(userInput[x]).val(input);
 }
+
+//Add Past/Current/Future classes
+var timeArray = $(".hour").get();
+
+for (var i = 0; i < timeArray.length; i++) {
+    var trId = parseInt(timeArray[i].id);
+    if (trId < parseInt(currentTime)) {
+        timeArray[i].classList.add("past");
+        var userHour = timeArray[i].id;
+        var userText = localStorage.getItem(hour);
+        timeArray[i].val = userText;
+
+    } else if (trId > parseInt(currentTime)) {
+        timeArray[i].classList.add("future");
+        var userHour = timeArray[i].id;
+        var userText = localStorage.getItem(hour);
+        timeArray[i].val = userText;
+
+    } else {
+        timeArray[i].classList.add("present");
+        var userHour = timeArray[i].id;
+        var userText = localStorage.getItem(hour);
+        timeArray[i].val = userText;
+    }
+}
